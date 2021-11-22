@@ -70,19 +70,22 @@ class StickyNote {
         newNote.append(btn_div)
 
         const textField = document.createElement('textarea')
+        this.textField = textField
         textField.rows = 8
         textField.cols = 40
         textField.className = 'noteTextArea'
         textField.wrap = 'hard'
         newNote.append(textField)
-        this.textField = textField
 
 
+        const save_btn_div = document.createElement('div')
+        save_btn_div.className = 'noteSaveBtnDiv'
         const save_btn = document.createElement('button')
-        save_btn.innerText = 'Save'
+        save_btn.innerText = 'Download'
         save_btn.className = 'noteSaveBtn'
         save_btn.onclick = () => this.saveNote()
-        newNote.append(save_btn)
+        save_btn_div.append(save_btn)
+        newNote.append(save_btn_div)
 
     }
 
@@ -152,8 +155,6 @@ class StickyNote {
     removeFromDom() {
         this.parentNode.removeChild(this.noteDiv)
     }
-
-
 
 }
 
