@@ -10,7 +10,7 @@ class StickyNote {
     noteDiv = document.createElement('div')
     textField;
 
-    constructor(isFixed, parent) {
+    constructor(isFixed, parent, title) {
         const newNote = this.noteDiv
 
         newNote.className = 'StickyNote'
@@ -28,7 +28,7 @@ class StickyNote {
 
 
         const title_p = document.createElement('p')
-        title_p.innerText = "Sticky Note"
+        title_p.innerText = title || "Sticky Note"
         title_p.style.marginLeft = '10px'
         newNote.append(title_p)
 
@@ -176,8 +176,8 @@ StickyNoteGenerator.prototype = {
         return newNote
     },
 
-    createNoteFixed: function (location, parent) {
-        const new_note = new StickyNote(true, parent)
+    createNoteFixed: function (location, parent, title) {
+        const new_note = new StickyNote(true, parent, title || `Sticky Note ${this.allNotes.length + 1}`)
         this.allNotes.push(new_note)
         new_note.addToDOM()
         new_note.setLocationFixed(location)
