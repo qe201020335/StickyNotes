@@ -91,10 +91,14 @@ class StickyNote {
 
     saveNote() {
         //console.dir(this.textField)
+        if (this.textField.value === "") {
+            // Don't download anything if it is empty
+            return;
+        }
+        // https://stackoverflow.com/questions/3665115/how-to-create-a-file-in-memory-for-user-to-download-but-not-through-server
         let element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(this.textField.value));
-        element.setAttribute('download', "Note" + new Date());
-
+        element.setAttribute('download', "Note " + new Date());
         element.style.display = 'none';
         document.body.appendChild(element);
         element.click();
