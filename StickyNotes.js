@@ -34,7 +34,7 @@ class StickyNote {
         title_p.style.marginLeft = '10px'
         newNote.append(title_p)
 
-        const btnx = document.createElement('bottom')
+        const btnx = document.createElement('button')
         btnx.innerText = '×'
         btnx.onclick = () => this.removeFromDom()
         btnx.className = "noteCloseBtn"
