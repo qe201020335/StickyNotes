@@ -25,6 +25,8 @@ In `parentNode`, the HTML element stored here will be used when `addToDOM` and `
 
 In `noteDiv`, this div holds all the subsequent elements that consists the StickyNote. It has the style `position` set to `fixed` if `isPositionFixed` is true, `absolute` if not. Then the position of this div is set and changed by `setLocationFixed` or `setLocationAbsolute` method.
 
+In `textField`, this is the `textarea` element that user can enter stuff which is the core of this library. The `value` of this text field is assigned by `setNoteContent` method and read by `saveNote` method when the **download** button is clicked. 
+
 
 ## Features to be Implemented
 One feature mentioned in the proposal but has not been implemented is the user draggale note. This is challenging because simply subscribe to the `mousemove` event will have performance issue and it is buggy when the user right clicks. The other things that I will implement later is more customization options for the users and developer. This includes backaground color, disable repositioning, initial text field size... etc. The challenge here is how do I give these api without directly exposing my objects and how much customizability is good. Additionally, more getters will be implemented for easier information look up such as `getText` and `getLocation`. 
