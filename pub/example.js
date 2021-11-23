@@ -23,14 +23,15 @@ function onClickB2(location) {
 
 function onClickB3(location) {
     if (note3 === null) {
-        note3 = generator.createNoteFixed(location, document.querySelector("#content"));
+        note3 = generator.createNoteAbsolute(location, document.querySelector("#p2"), "Para 2");
     }
     note3.addToDOM()
 }
 
 function onClickB4(location) {
     if (note4 === null) {
-        note4 = generator.createNoteFixed(location, document.querySelector("#content"));
+        note4 = generator.createNoteAbsolute(location, document.querySelector("#p4"), "Para 4");
+        note4.setNoteContent("This is predefined note for para 4. \nTry edit this")
     }
     note4.addToDOM()
 }

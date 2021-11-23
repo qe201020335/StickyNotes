@@ -14,18 +14,16 @@
 
 <h1 style="margin: 3%"> Sticky Note Demo </h1>
 
-<div style="align-content: center; align-items: center; margin: auto; width: 50%">
+<div id='dashButtons'>
     <button id="b0" onclick="onClickDelete()">Remove All</button>
-    <button id="b1" onclick="onClickB1('top-right')">Open Note 1</button>
-    <button id="b2" onclick="onClickB2('bottom-right')">Open Note 2</button>
-<!--    <button id="b3" onclick="onClickB3('top-left')">Fixed Top Left</button>-->
-<!--    <button id="b4" onclick="onClickB4('bottom-left')">Fixed Bottom Left</button>-->
+    <button id="b1" onclick="onClickB1('top-right')">Open a Fixed Note</button>
+    <button id="b2" onclick="onClickB2('bottom-right')">Open Another Fixed Note</button>
 </div>
 
 <h2 style="margin-left: 10%">Lorem Ipsum</h2>
 
-<div style="margin-right: 30%; margin-left: 10%" id="content">
-    <p class="textP">
+<div id="content">
+    <p class="textP" id="p1">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at consectetur tellus,
         et sodales leo. Donec lectus justo, dignissim sit amet tincidunt at, fringilla a justo.
         Donec gravida auctor laoreet. Vivamus maximus orci eget lectus auctor porttitor.
@@ -37,16 +35,23 @@
         maximus dignissim urna libero et ex.
     </p>
 
-    <p class="textP">
+    <p class="textP" id="p2">
         Nunc interdum finibus ipsum, ac ullamcorper velit. Quisque non urna at nibh pharetra scelerisque.
         Aliquam erat volutpat. Integer quis nulla dui. Nunc sed pretium mi. Morbi et varius felis.
         Sed ac molestie augue. Nullam non ex eget leo venenatis iaculis et eget ligula.
         Curabitur tincidunt sapien at ligula auctor, ultrices hendrerit augue commodo.
         Maecenas vulputate pulvinar arcu quis aliquam. Maecenas egestas sodales odio,
         quis accumsan sem interdum non. Morbi efficitur sodales sapien a vestibulum.
+        Nunc interdum finibus ipsum, ac ullamcorper velit. Quisque non urna at nibh pharetra scelerisque.
+        Aliquam erat volutpat. Integer quis nulla dui. Nunc sed pretium mi. Morbi et varius felis.
+        Sed ac molestie augue. Nullam non ex eget leo venenatis iaculis et eget ligula.
+        Curabitur tincidunt sapien at ligula auctor, ultrices hendrerit augue commodo.
+        Maecenas vulputate pulvinar arcu quis aliquam. Maecenas egestas sodales odio,
+        quis accumsan sem interdum non. Morbi efficitur sodales sapien a vestibulum.
+        <button id="b3" onclick="onClickB3('right')">Take Note!</button>
     </p>
 
-    <p class="textP">
+    <p class="textP" id="p3">
         Suspendisse arcu lacus, vulputate eu velit vitae, laoreet faucibus ipsum.
         Vestibulum felis sem, bibendum vel imperdiet in, bibendum vitae nunc. Fusce ultrices magna nibh,
         eu fermentum nulla interdum id. Nulla vel tincidunt leo. Donec pretium purus non finibus blandit.
@@ -58,7 +63,8 @@
         Sed quis magna in odio tristique accumsan.
     </p>
 
-    <p class="textP">
+    <p class="textP" id="p4">
+        <button id="b4" onclick="onClickB4('left')">See Note</button><br>
         Suspendisse elementum enim ac ex sodales accumsan. Aliquam consectetur, diam at cursus tempus,
         libero mauris venenatis justo, sed vehicula metus purus et ante. Pellentesque quis bibendum massa.
         Nulla sit amet efficitur dolor. Nam vitae eleifend libero. Quisque efficitur pulvinar nunc,
