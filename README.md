@@ -1,12 +1,17 @@
-# js-library-zhan6247
 # StickyNotes
-A frontend JavaScript library that makes notes taking easier on webpage
+A frontend JavaScript library that makes notes taking easier on webpage for the user
 
-## Purpose and Features
-This library will add sticky notes to a webpage that allows users to take notes while browsing this page. It also allows the developer to add sticky notes with predefined contents in them without having the user take notes themselves. An instance of a sticky note can be placed anywhere on the screen and can be dragged by the user. The developer can also change the content in a note and move it on the fly. A sticky note will have a save button to allow the user to download the note. <p>
-This may sound like a browser extension that just allows note-taking in general. However, a web developer does not have access to the user's browser extension. This library allows the developer to show notes for the user and dynamically change the content in a note. By using this library, the developer doesn't need to worry about how to set up the CSS for the notes and precisely calculate the desired location. The location of a sticky note can be easily defined by just `top-right`, `bottom-left` and the library will do the rest for you.
+This library will add sticky notes to a webpage that allows users to take notes while browsing this page. It also allows the developer to add sticky notes with predefined contents in them without having the user take notes themselves. This library can be used in article and guide website where taking notes will greatly imporoves users' experience. The website developer can add a note to each section of the page/article/guide by letting the user click a button or triggering on other events. The content of an instance will not lose if the user close the note. It will appear again when the same instance is added back to the DOM.
 
-## Example Use Cases
-For a research article hosting website, the developer can add a sticky note to an article page that allows the user to take short notes while reading the article. The developer can also add the abstract of each section to the note when the user finishes reading a section. <p>
-For an online tutorial/guide website, the developer can add shortened bullet form steps to a note and show the note when the user finishes reading. This makes sure the user keeps in mind the steps of the guide and can be prepared when they actually follow the guide. <p>
-For an online learning platform, sticky notes can be used for interactive learning where notes containing some questions can be shown when the user finishes learning a part. Then the user can think about the question and write the answer in the note and download it for later review.
+## Example Demo Page
+The example usage page is deployed [here](https://stickynotesdemo-309-sky.herokuapp.com/). <br>
+This webpage contains a slightly long article as a demostration for the library. The content of the article is the industry standard **Lorem Ipsum**. There are several buttons that open a specific sticky note instance which is the entry point to this library.
+  
+## Features
+Currently, an instance of note can either be **fixed** in the viewport or **absolute** positioned to a HTML element. This cannot be change after the object creatation. A **fixed** note have 4 buttons allows the user to change the position of the note to one corner of the viewport.
+
+
+## Features to be Implemented
+  More customization options for the users and developer.
+
+
