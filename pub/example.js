@@ -31,7 +31,7 @@ function onClickB3(location) {
 function onClickB4(location) {
     if (note4 === null) {
         note4 = generator.createNoteAbsolute(location, document.querySelector("#p4"), "Para 4");
-        note4.setNoteContent("This is predefined note for para 4. \nTry edit this")
+        note4.setNoteContent("This is a predefined note for para 4. \nTry to edit this")
     }
     note4.addToDOM()
 }
