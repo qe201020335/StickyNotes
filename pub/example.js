@@ -9,14 +9,14 @@ let note4 = null;
 
 function onClickB1(location) {
     if (note1 === null) {
-        note1 = generator.createNoteFixed(location, document.querySelector("#content"));
+        note1 = generator.createNoteFixed(location);
     }
     note1.addToDOM()
 }
 
 function onClickB2(location) {
     if (note2 === null) {
-        note2 = generator.createNoteFixed(location, document.querySelector("#content"));
+        note2 = generator.createNoteFixed(location);
     }
     note2.addToDOM()
 }

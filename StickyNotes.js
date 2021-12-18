@@ -27,7 +27,7 @@
                 newNote.style.position = 'absolute'
             }
 
-            if (parent === null) {
+            if (!parent) {
                 this.parentNode = document.querySelector("body")
             } else {
                 this.parentNode = parent
@@ -147,7 +147,6 @@
                 this.title_input.style.removeProperty('display')
             }
 
-
         }
 
         saveNote() {
@@ -241,11 +240,19 @@
                     this.parentNode.insertBefore(this.noteDiv, this.parentNode.firstChild)
                 }
             }
+            if (this.parentNode !== document.querySelector('body')) {
+                this.parentNode.style.borderRadius = '10px'
+                this.parentNode.style.border = '3px solid black'
+            }
         }
 
         removeFromDom() {
             if (this.parentNode.contains(this.noteDiv)) {
                 this.parentNode.removeChild(this.noteDiv)
+                if (this.parentNode !== document.querySelector('body')) {
+                    this.parentNode.style.removeProperty("borderRadius")
+                    this.parentNode.style.removeProperty('border')
+                }
             }
         }
 
