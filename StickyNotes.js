@@ -243,6 +243,7 @@
             if (this.parentNode !== document.querySelector('body')) {
                 this.parentNode.style.borderRadius = '10px'
                 this.parentNode.style.border = '3px solid black'
+                this.parentNode.style.padding = '10px'
             }
         }
 
@@ -252,6 +253,7 @@
                 if (this.parentNode !== document.querySelector('body')) {
                     this.parentNode.style.removeProperty("borderRadius")
                     this.parentNode.style.removeProperty('border')
+                    this.parentNode.style.removeProperty('padding')
                 }
             }
         }
