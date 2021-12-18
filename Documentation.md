@@ -89,6 +89,9 @@ This will remove the note from the DOM if it is previously opened i.e., close th
 The background color of a note has a default yellow (`#FFD357`) color. <br>
 To change the background color of a note, simply use `StickyNote.noteDiv.style.backgroundColor`
 
+### Instance Specific
+The field `noteDiv`, `textField`, `title_p`, `title_input` are just regular HTML node which you can change the styles simply with `.style`
+
 ### Complete Theme Overwrite
 Most of the styling are included in `StickyNotes.css` which you can edit it or include a new style sheet after this to overwrite.
 
