@@ -10,3 +10,10 @@
     /*border: 5px solid grey;*/
     /*border-radius: 10px*/
 }
+
+code {
+    border-radius: 2px;
+    background-color: #DDDDDD;
+    padding: 3px;
+    font-weight: bold;
+}

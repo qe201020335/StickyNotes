@@ -1,8 +1,6 @@
 # StickyNotes 📝
 A frontend JavaScript library that makes note-taking easier on a webpage for the user
 
-# Documentation
-
 ## Getting Started
 
 
@@ -55,3 +53,40 @@ WARNING: DO NOT OVERWRITE ANY OF THESE FIELDS! YOU SHOULD ONLY READ FROM THEM!
 | `title_p`         | HTML Node | The title element of the note. <br> Use `StickyNote.title_p.innerText` to access the title |
 | `title_input`     | HTML Node | The input element at when the user is editing the title |
 | `editingTitle`    | bool      | Whether the user is editing the title|
+
+### `StickyNote.saveNote()`
+
+This will download the content of the note as a text file when triggered
+
+### `StickyNote.setNoteContent(content)`
+
+This will set the content of the note as what given
+
+### `StickyNote.setLocationAbsolute(location)`
+
+This will set the location of an absolute position note. 
+Error will be raised if the note is a fixed position note.
+`location` can be `'left'` or `'right'`
+
+### `StickyNote.setLocationFixed(location)`
+
+This will set the location of a fixed position note.
+Error will be raised if the note is an absolute position note. <br>
+`location` can be `'top-left'`, `'top-right'`, `'bottom-left'`, or `'bottom-right'` 
+
+### `StickyNote.addToDOM()`
+
+This will add the note into the DOM (as a child of the parent) if hasn't already been in i.e., open this note.
+
+### `StickyNote.removeFromDom()`
+
+This will remove the note from the DOM if it is previously opened i.e., close this note.
+
+
+## Customization
+
+
+
+
+
+
