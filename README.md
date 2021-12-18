@@ -1,31 +1,59 @@
 # StickyNotes 📝
 A frontend JavaScript library that makes note-taking easier on a webpage for the user
 
-This library will add sticky notes to a webpage that allows users to take notes while browsing this page. It also allows the developer to add sticky notes with predefined contents without having the user take notes themselves. This library can be used in articles and guide websites where taking notes will greatly improve users' experience. The website developer can add a note to each section of the page/article/guide by letting the user click a button or triggering on other events. The content of an instance will not lose if the user closes the note. It will appear again when the same instance is added back to the DOM.
+Checkout the library Main Page! [HERE](https://stickynotesdemo-309-sky.herokuapp.com/)
 
-## Example Demo Page
-The example usage page is deployed [here](https://stickynotesdemo-309-sky.herokuapp.com/) on heroku. <br>
-This webpage contains a slightly long article as a demonstration for the library. The content of the article is the industry standard **Lorem Ipsum**. In addition, there are several buttons that open a specific sticky note instance which is the entry point to this library.
-  
-## Features
-An instance of note can either be **fixed** in the viewport or **absolute** positioned to a parent HTML element. This cannot be changed after the object creatation. A **fixed** note has 4 buttons that allow the user to change the position of the note to one corner of the viewport. An **absolute** note has 2 buttons that move the note to the left or right of the parent HTML element. Each note also has a close button that will simply remove itself from the DOM. However, content in the note will not lose, and it can be added back to the DOM just like before closing it.
+Checkout the detailed API documentation! [HERE](https://stickynotesdemo-309-sky.herokuapp.com/doc.html)
 
-## Object Representation
-The main object of this library is the `StickyNote` class. In it, there is a field `parentNode` that holds the parent HTML element this note should be attached to. In addition, it has an `isPositionFixed` field that specifies whether this note's position is `fixed` in the viewport or `absolute` to `parentNode`. Then there is `noteDiv` and `textField`, which is the HTML element of the whole StickyNote div and the note's text area, respectively. <br>
-Here is an example instance of `StickyNote`:
+## Getting Started
+
+Include `StickyNotes.js` and `StickyNotes.css` in the head
+
+### Create a simple fixed note
+```html
+<button onclick="onClick('top-right')">Open a Fixed Note</button>
 ```
-{
-    parentNode: <body>,
-    isPositionFixed: true,
-    noteDiv: <div>...<textarea/>...</div>,
-    textField: <textarea>
+Then in your own js file
+```js
+const generator = new StickyNoteGenerator();
+let note1 = null;
+function onClick(location) {
+  if (note1 === null) {
+    note1 = generator.createNoteFixed(location);
+  }
+  note1.addToDOM()
 }
 ```
-In `parentNode`, the HTML element stored here will be used when `addToDOM` and `removeFromDom` get called, at when the `noteDiv` div will be appended to or removed from `parentNode`. 
 
-In `noteDiv`, this div holds all the subsequent elements that consist of the StickyNote. It has the style `position` set to `fixed` if `isPositionFixed` is true, `absolute` if not. Then the position of this div is set and changed by `setLocationFixed` or `setLocationAbsolute` method.
+### Create a simple absolute position note
+```html
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<button onclick="onClick('right')">Take Note!</button>
+```
+Then in your own js file
+```js
+const generator = new StickyNoteGenerator();
+let note1 = null;
+function onClick(location) {
+  if (note1 === null) {
+    note1 = generator.createNoteAbsolute(location, document.querySelector("#p1"), "Para 1");
+  }
+  note1.addToDOM()
+}
+```
 
-In `textField`, this is the `textarea` element that users can enter, which is the core of this library. The `value` of this text field is assigned by `setNoteContent` method and read by `saveNote` method when the **download** button is clicked. 
+### Some predefined content?
+```js
+const generator = new StickyNoteGenerator();
+let note1 = null;
+function onClick(location) {
+  if (note1 === null) {
+    note1 = generator.createNoteFixed(location);
+    note1.setNoteContent("This is a predefined note.")
+  }
+  note1.addToDOM()
+}
+```
 
-## Features to be Implemented
-One feature mentioned in the proposal but has not been implemented is the user draggable note. This is challenging because simply subscribing to the `mousemove` event will have a performance issue, and it is buggy when the user right-clicks. The other thing that I will implement later is more customization options for the users and developers. This includes the background colour, disablable repositioning, initial text field size, etc. The challenge here is how I give these api without directly exposing my objects and how much customizability is good. Additionally, more getters will be implemented for information such as `getText` and `getLocation`. 
+
+
