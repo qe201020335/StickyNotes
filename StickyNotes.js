@@ -240,9 +240,15 @@
             return new_note
         },
 
-        removeAll: function () {
+        closeAll: function () {
             for (const note of this.allNotes) {
                 note.removeFromDom()
+            }
+        },
+
+        openAll: function () {
+            for (const note of this.allNotes) {
+                note.addToDOM()
             }
         }
     }

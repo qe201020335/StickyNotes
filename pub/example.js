@@ -38,5 +38,9 @@ function onClickB4(location) {
 
 
 function onClickDelete() {
-    generator.removeAll()
+    generator.closeAll()
+}
+
+function onClickOpen() {
+    generator.openAll()
 }
