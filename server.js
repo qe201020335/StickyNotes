@@ -18,6 +18,10 @@ app.get('/StickyNotes.js', (req, res) => {
 app.get('/StickyNotes.css', (req, res) => {
 	res.sendFile(path.join(__dirname, '/StickyNotes.css'))
 })
+// documentation markdown
+app.get('/Documentation.md', (req, res) => {
+	res.sendFile(path.join(__dirname, '/Documentation.md'))
+})
 
 const port = process.env.PORT || 5000
 app.listen(port, () => {
