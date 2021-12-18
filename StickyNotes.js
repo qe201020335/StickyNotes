@@ -11,6 +11,9 @@
         isPositionFixed = false
         noteDiv = document.createElement('div')  // the outer most container, i.e the whole sticky note
         textField;
+        title_p;
+        title_input;
+        editingTitle = false;
 
         constructor(isFixed, parent, title) {
             const newNote = this.noteDiv
@@ -30,17 +33,33 @@
                 this.parentNode = parent
             }
 
-
-            const title_p = document.createElement('p')
-            title_p.innerText = title || "Sticky Note"
-            title_p.style.marginLeft = '10px'
-            newNote.append(title_p)
-
             const btnx = document.createElement('button')
             btnx.innerText = '×'
             btnx.onclick = () => this.removeFromDom()
             btnx.className = "noteCloseBtn"
-            title_p.append(btnx)
+            newNote.append(btnx)
+
+
+            const title_p = document.createElement('p')
+            this.title_p = title_p
+            title_p.innerText = title || "Sticky Note"
+            title_p.style.marginLeft = '10px'
+            newNote.append(title_p)
+
+            const title_input = document.createElement('input')
+            this.title_input = title_input
+            title_input.value = title_p.innerText
+            title_input.style.display = 'none'
+            title_input.style.marginLeft = '10px'
+            title_input.style.marginTop = '1em'
+            title_input.style.marginBottom = '1em'
+            newNote.append(title_input)
+
+            const edit_title = document.createElement('button')
+            edit_title.innerText = 'Edit Title'
+            edit_title.onclick = () => this.onEditTitleClick(edit_title)
+            edit_title.className = "noteEditTitleBtn"
+            newNote.append(edit_title)
 
 
             const btn_div = document.createElement('div')
@@ -113,6 +132,24 @@
 
         }
 
+        onEditTitleClick(btn) {
+            if (this.editingTitle) {
+                this.editingTitle = false
+                btn.innerText = 'Edit Title'
+                this.title_p.innerText = this.title_input.value
+                this.title_input.style.display = 'none'
+                this.title_p.style.removeProperty('display')
+            } else {
+                this.editingTitle = true
+                btn.innerText = 'Save'
+                this.title_input.value = this.title_p.innerText
+                this.title_p.style.display = 'none'
+                this.title_input.style.removeProperty('display')
+            }
+
+
+        }
+
         saveNote() {
             //console.dir(this.textField)
             if (this.textField.value === "") {
@@ -122,7 +159,7 @@
             // https://stackoverflow.com/questions/3665115/how-to-create-a-file-in-memory-for-user-to-download-but-not-through-server
             let element = document.createElement('a');
             element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(this.textField.value));
-            element.setAttribute('download', "Note " + new Date());
+            element.setAttribute('download', this.title_p.innerText + " " + new Date());
             element.style.display = 'none';
             document.body.appendChild(element);
             element.click();

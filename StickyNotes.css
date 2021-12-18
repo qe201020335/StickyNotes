@@ -8,9 +8,20 @@
     margin: 2px;
     position: absolute;
     right: 5%;
+    top: 5%;
     font-size: larger;
     background-color: #FFD357;
     border: solid black 1px;
+    cursor: pointer;
+}
+
+.noteEditTitleBtn {
+    margin: 2px;
+    position: absolute;
+    right: 15%;
+    top: 5%;
+    font-size: medium;
+    border: solid black 2px;
     cursor: pointer;
 }
 
