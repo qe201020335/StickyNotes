@@ -66,7 +66,7 @@
             btn_div.className = 'noteBtnDiv'
 
             const move_span = document.createElement('span')
-            move_span.innerText = 'Move Note:'
+            move_span.innerText = 'Note Position:'
             move_span.style.marginRight = '2px'
             btn_div.append(move_span)
 
