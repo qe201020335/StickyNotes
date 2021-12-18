@@ -18,6 +18,14 @@ code {
     font-weight: bold;
 }
 
+.language-js {
+    display: block;
+}
+
+.language-html {
+    display: block;
+}
+
 table {
     border: 1px solid gray;
     border-spacing: 0px;
