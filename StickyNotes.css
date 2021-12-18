@@ -11,6 +11,7 @@
     font-size: larger;
     background-color: #FFD357;
     border: solid black 1px;
+    cursor: pointer;
 }
 
 .noteBtnDiv {
@@ -22,6 +23,7 @@
     margin-left: 3px;
     margin-right: 3px;
     border: solid black 2px;
+    cursor: pointer;
 }
 
 .noteTextArea {
@@ -32,7 +34,7 @@
 }
 
 .noteSaveBtn {
-
+    cursor: pointer;
 }
 
 .noteSaveBtnDiv {

@@ -5,12 +5,11 @@
 
 (function(global, document) {
 
-
     class StickyNote {
 
         parentNode = null
         isPositionFixed = false
-        noteDiv = document.createElement('div')
+        noteDiv = document.createElement('div')  // the outer most container, i.e the whole sticky note
         textField;
 
         constructor(isFixed, parent, title) {
@@ -46,6 +45,11 @@
 
             const btn_div = document.createElement('div')
             btn_div.className = 'noteBtnDiv'
+
+            const move_span = document.createElement('span')
+            move_span.innerText = 'Move Note:'
+            move_span.style.marginRight = '2px'
+            btn_div.append(move_span)
 
             if (isFixed) {
                 const btn1 = document.createElement('button')
@@ -216,13 +220,6 @@
     }
 
     StickyNoteGenerator.prototype = {
-
-        // createNote: function (isFixed, parent) {
-        //     const newNote = new StickyNote(isFixed, parent)
-        //     this.allNotes.push(newNote)
-        //     newNote.addToDOM()
-        //     return newNote
-        // },
 
         createNoteFixed: function (location, parent, title) {
             const new_note = new StickyNote(true, parent, title || `Sticky Note ${this.allNotes.length + 1}`)
