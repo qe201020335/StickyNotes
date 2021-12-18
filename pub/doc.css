@@ -17,3 +17,18 @@ code {
     padding: 3px;
     font-weight: bold;
 }
+
+table {
+    border: 1px solid gray;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+table th {
+    border: 1px solid gray;
+    padding: 3px;
+
+}
+table td {
+    border: 1px solid gray;
+    padding: 3px;
+}

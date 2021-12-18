@@ -14,7 +14,7 @@ A frontend JavaScript library that makes note-taking easier on a webpage for the
 This method will create a fixed sticky note on the viewport.
 
 | Property    | Type      | Required? | Default  | Description |
-| --------------- |:---------:|:---------:|:----------:| ----------- |
+| :--------------- |:---------:|:---------:|:----------:| ----------- |
 | `location`  | string        | Yes | \ | The initial location of the sticky note. <br> It can be `'top-left'`, `'top-right'`, `'bottom-left'`, or `'bottom-right'` |
 | `parent`    | HTML Node  | NO  | body | The parent node which the sticky note div will be added as a child |
 | `title`     | string        | NO  |  `Sticky Note #` | The title of the sticky note |
@@ -24,7 +24,7 @@ This method will create a fixed sticky note on the viewport.
 This method will create a sticky note with absolute position relative to the parent.
 
 | Property    | Type      | Required? | Default  | Description |
-| --------------- |:---------:|:---------:|:----------:| ----------- |
+| :--------------- |:---------:|:---------:|:----------:| ----------- |
 | `location`  | string        | Yes | \ | The initial location of the sticky note. <br> It can be `'left'` or `'right'` |
 | `parent`    | HTML Node  | NO  | body | The parent node which the sticky note div will be added as a child |
 | `title`     | string        | NO  |  `Sticky Note #` | The title of the sticky note |
@@ -45,7 +45,7 @@ Here is a list of fields that you can access.
 WARNING: DO NOT OVERWRITE ANY OF THESE FIELDS! YOU SHOULD ONLY READ FROM THEM!
 
 | Field       		| Type          | Description |
-| --------------- |:---------:| ----------- |
+| :--------------- |:---------:| ----------- |
 | `parentNode`    	| HTML Node | The parent node which the sticky note div will be added as a child |
 | `isPositionFixed` | bool      | Whether this is a fixed position note or an absolute position note |
 | `noteDiv`         | HTML Node | The outer most div of the note, which holds all the subsequent elements <br> that consist of the StickyNote i.e the whole sticky note |
@@ -85,8 +85,24 @@ This will remove the note from the DOM if it is previously opened i.e., close th
 
 ## Customization
 
+### Background Color
+The background color of a note has a default yellow (`#FFD357`) color. <br>
+To change the background color of a note, simply use `StickyNote.noteDiv.style.backgroundColor`
 
+### Complete Theme Overwrite
+Most of the styling are included in `StickyNotes.css` which you can edit it or include a new style sheet after this to overwrite.
 
+Here is a list of selectors
 
+| CSS Selector | Description |
+| :-------------|:----------- |
+|`.StickyNote` | The outer most div of the note |
+|`.noteCloseBtn` | The button for close note |
+|`.noteEditTitleBtn` | The button for edit/save the title |
+|`.noteBtnDiv` | The div containing all the positional buttons |
+|`.notePositionBtn` | The button for repositioning the note |
+|`.noteTextArea` | The text area for note content |
+|`.noteSaveBtn` | The button that downloads the note |
+|`.noteSaveBtnDiv` | The div containing the noteSaveBtn |
 
 
