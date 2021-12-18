@@ -136,7 +136,7 @@
             if (this.editingTitle) {
                 this.editingTitle = false
                 btn.innerText = 'Edit Title'
-                this.title_p.innerText = this.title_input.value
+                this.title_p.innerText = this.title_input.value ? this.title_input.value : "Sticky Note"
                 this.title_input.style.display = 'none'
                 this.title_p.style.removeProperty('display')
             } else {
