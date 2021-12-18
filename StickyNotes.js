@@ -203,7 +203,9 @@
         }
 
         removeFromDom() {
-            this.parentNode.removeChild(this.noteDiv)
+            if (this.parentNode.contains(this.noteDiv)) {
+                this.parentNode.removeChild(this.noteDiv)
+            }
         }
 
     }
