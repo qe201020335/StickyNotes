@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sticky Note Demo</title>
+    <title>Sticky Notes</title>
 
     <script type="application/javascript" src="/StickyNotes.js"></script>
     <script type="application/javascript" src="example.js"></script>
@@ -13,7 +13,7 @@
 <body>
 <div id="landing_container">
     <div id="landing_header">
-        <h1> Sticky Note 📝</h1>
+        <h1> Sticky Notes 📝</h1>
         <h4> Note taking on the web hasn't been this easy!</h4>
     </div>
 
@@ -23,13 +23,15 @@
 
     <h3>Now let's see the features!</h3>
 
-
+    <div>
+        <span>First, you might want to take some note as you read through this page!</span>
+        <button id="b1" onclick="onClickB1('top-right')">Gimme a Note!</button>
+    </div>
 
 
     <div id='dashButtons'>
         <button id="b0" onclick="onClickDelete()">Close All</button>
         <button id="b00" onclick="onClickOpen()">Open All</button>
-        <button id="b1" onclick="onClickB1('top-right')">Open a Fixed Note</button>
         <button id="b2" onclick="onClickB2('bottom-right')">Open Another Fixed Note</button>
 
     </div>
