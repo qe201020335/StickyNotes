@@ -6,6 +6,8 @@ let note2 = null;
 let noteP1 = null;
 let note4 = null;
 
+let colorNote = null;
+
 
 function onClickB1(location) {
     if (note1 === null) {
@@ -36,6 +38,20 @@ function onClickB4(location) {
     note4.addToDOM()
 }
 
+function onClickColor(location) {
+    if (colorNote === null) {
+        colorNote = generator.createNoteFixed(location);
+        colorNote.noteDiv.style.backgroundColor = "#f99bae"
+    }
+    colorNote.addToDOM()
+}
+
+function changeColor() {
+    if (colorNote) {
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        colorNote.noteDiv.style.backgroundColor = '#' + randomColor
+    }
+}
 
 function onClickDelete() {
     generator.closeAll()

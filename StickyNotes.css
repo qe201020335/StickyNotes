@@ -10,7 +10,7 @@
     right: 5%;
     top: 5%;
     font-size: larger;
-    background-color: #FFD357;
+    background-color: rgba(0,0,0,0);
     border: solid black 1px;
     cursor: pointer;
 }
