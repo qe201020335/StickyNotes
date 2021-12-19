@@ -19,9 +19,20 @@ a {
 }
 
 
-#content {
-    margin-right: 20%;
-    margin-left: 20%;
+.content {
+    margin: 1.5em 10%;
+}
+
+#content1 {
+    /*margin-top: 3em;*/
+}
+
+.textP {
+    background-color: #DDDDDD;
+}
+
+button {
+    margin: 3px;
 }
 
 #dashButtons {

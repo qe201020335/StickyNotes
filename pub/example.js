@@ -3,7 +3,7 @@
 const generator = new StickyNoteGenerator();
 let note1 = null;
 let note2 = null;
-let note3 = null;
+let noteP1 = null;
 let note4 = null;
 
 
@@ -21,11 +21,11 @@ function onClickB2(location) {
     note2.addToDOM()
 }
 
-function onClickB3(location) {
-    if (note3 === null) {
-        note3 = generator.createNoteAbsolute(location, document.querySelector("#p2"), "Para 2");
+function onClickP1(location) {
+    if (noteP1 === null) {
+        noteP1 = generator.createNoteAbsolute(location, document.querySelector("#p1"), "Para 1");
     }
-    note3.addToDOM()
+    noteP1.addToDOM()
 }
 
 function onClickB4(location) {

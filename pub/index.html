@@ -17,67 +17,60 @@
         <h4> Note taking on the web hasn't been this easy!</h4>
     </div>
 
-    <div>
+    <div style="margin-top: 3em;margin-bottom: 3em">
         <span class="nav_link">Checkout the detailed API documentation! <a href="doc.html">HERE</a></span>
     </div>
 
-    <h3>Now let's see the features!</h3>
+    <h2>Now let's see the features!</h2>
 
-    <div>
-        <span>First, you might want to take some note as you read through this page!</span>
-        <button id="b1" onclick="onClickB1('top-right')">Gimme a Note!</button>
+    <div style="margin-top: 3em">
+        <p>First, you might want to take some note as you read through this page.
+            <button id="b1" onclick="onClickB1('top-right')">Gimme a Note!</button>
+        </p>
+
+        <p>You want another one?
+            <button id="b2" onclick="onClickB2('bottom-right')">Gimme another!</button>
+        </p>
+
+        <p>These two are the <strong>Fixed Note</strong> which their position is fixed to the viewport.</p>
+        <p>If you ever accidentally close a note, don't worry! You can simply click the button again to have your
+            note back! Without losing anything!</p>
+    </div>
+
+    <div style="margin-top: 3em">
+        <p>If creating a note is so easy, there might be some <strong>problems</strong>!</p>
+        <p>There might be too many notes opened, and you had enough of it.
+            <button id="b0" onclick="onClickDelete()">Close All!</button>
+        </p>
+        <p>Or, you just want to open all the notes that you had ever opened.
+            <button id="b00" onclick="onClickOpen()">Open All!</button>
+        </p>
+        <p>Note: These two buttons does nothing when you have not ever opened a note.</p>
+    </div>
+
+    <div style="margin-top: 3em">
+        <p>Now we have an paragraph here. </p>
+        <div class="content" >
+            <p class="textP" id="p1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at consectetur tellus,
+                et sodales leo. Donec lectus justo, dignissim sit amet tincidunt at, fringilla a justo.
+                Donec gravida auctor laoreet. Vivamus maximus orci eget lectus auctor porttitor.
+                Aliquam erat volutpat. Nullam lobortis lacus non congue faucibus.
+                Morbi maximus lorem ut leo bibendum pulvinar eu vel quam. Etiam eu metus id dolor pharetra sollicitudin.
+                Aliquam quis ipsum venenatis, euismod mauris quis, lacinia urna. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Aliquam quis ante quam. Proin nisi risus, blandit in tincidunt et,
+                porta sed arcu. Nulla tincidunt, libero pellentesque lacinia semper, justo justo ullamcorper lectus,
+                maximus dignissim urna libero et ex.
+            </p>
+        </div>
+        <p>After reading through it, you might find it so good that you just want to take some note next to it!
+            <button id="b3" onclick="onClickP1('right')">Take Note!</button>
+        </p>
+        <p>Notice that the title of the note changed. The title of the note can me specified upon creation!</p>
     </div>
 
 
-    <div id='dashButtons'>
-        <button id="b0" onclick="onClickDelete()">Close All</button>
-        <button id="b00" onclick="onClickOpen()">Open All</button>
-        <button id="b2" onclick="onClickB2('bottom-right')">Open Another Fixed Note</button>
-
-    </div>
-
-    <h2 style="margin-left: 10%">Lorem Ipsum</h2>
-
-    <div id="content">
-        <p class="textP" id="p1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at consectetur tellus,
-            et sodales leo. Donec lectus justo, dignissim sit amet tincidunt at, fringilla a justo.
-            Donec gravida auctor laoreet. Vivamus maximus orci eget lectus auctor porttitor.
-            Aliquam erat volutpat. Nullam lobortis lacus non congue faucibus.
-            Morbi maximus lorem ut leo bibendum pulvinar eu vel quam. Etiam eu metus id dolor pharetra sollicitudin.
-            Aliquam quis ipsum venenatis, euismod mauris quis, lacinia urna. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Aliquam quis ante quam. Proin nisi risus, blandit in tincidunt et,
-            porta sed arcu. Nulla tincidunt, libero pellentesque lacinia semper, justo justo ullamcorper lectus,
-            maximus dignissim urna libero et ex.
-        </p>
-
-        <p class="textP" id="p2">
-            Nunc interdum finibus ipsum, ac ullamcorper velit. Quisque non urna at nibh pharetra scelerisque.
-            Aliquam erat volutpat. Integer quis nulla dui. Nunc sed pretium mi. Morbi et varius felis.
-            Sed ac molestie augue. Nullam non ex eget leo venenatis iaculis et eget ligula.
-            Curabitur tincidunt sapien at ligula auctor, ultrices hendrerit augue commodo.
-            Maecenas vulputate pulvinar arcu quis aliquam. Maecenas egestas sodales odio,
-            quis accumsan sem interdum non. Morbi efficitur sodales sapien a vestibulum.
-            Nunc interdum finibus ipsum, ac ullamcorper velit. Quisque non urna at nibh pharetra scelerisque.
-            Aliquam erat volutpat. Integer quis nulla dui. Nunc sed pretium mi. Morbi et varius felis.
-            Sed ac molestie augue. Nullam non ex eget leo venenatis iaculis et eget ligula.
-            Curabitur tincidunt sapien at ligula auctor, ultrices hendrerit augue commodo.
-            Maecenas vulputate pulvinar arcu quis aliquam. Maecenas egestas sodales odio,
-            quis accumsan sem interdum non. Morbi efficitur sodales sapien a vestibulum.
-            <button id="b3" onclick="onClickB3('right')">Take Note!</button>
-        </p>
-
-        <p class="textP" id="p3">
-            Suspendisse arcu lacus, vulputate eu velit vitae, laoreet faucibus ipsum.
-            Vestibulum felis sem, bibendum vel imperdiet in, bibendum vitae nunc. Fusce ultrices magna nibh,
-            eu fermentum nulla interdum id. Nulla vel tincidunt leo. Donec pretium purus non finibus blandit.
-            Quisque semper elit et sapien rhoncus congue. Phasellus convallis felis eu mi blandit hendrerit.
-            Vestibulum interdum vestibulum molestie. Vivamus euismod turpis enim, at sodales nulla condimentum non.
-            Vestibulum in justo vulputate nunc congue laoreet. Aenean vel posuere eros, ac malesuada libero.
-            Nunc ac ex ac lacus lobortis fermentum. Vestibulum sed sem ut arcu accumsan vestibulum.
-            Sed facilisis porttitor sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed quis magna in odio tristique accumsan.
-        </p>
+    <div class="content">
 
         <p class="textP" id="p4">
             <button id="b4" onclick="onClickB4('left')">See Note</button><br>
@@ -132,6 +125,10 @@
         </p>
 
     </div>
+
+    <h3>Customization!</h3>
+
+
 </div>
 </body>
 </html>

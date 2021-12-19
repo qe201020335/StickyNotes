@@ -251,7 +251,7 @@
             if (this.parentNode.contains(this.noteDiv)) {
                 this.parentNode.removeChild(this.noteDiv)
                 if (this.parentNode !== document.querySelector('body')) {
-                    this.parentNode.style.removeProperty("borderRadius")
+                    this.parentNode.style.borderRadius = "0"
                     this.parentNode.style.removeProperty('border')
                     this.parentNode.style.removeProperty('padding')
                 }
